@@ -18,21 +18,21 @@ public class WebController {
         this.scraperService = scraperService;
     }
 
-    // Головна сторінка
+  
     @GetMapping("/")
     public String index(Model model) {
         model.addAttribute("quotes", quoteRepository.findAll());
         return "index";
     }
 
-    // Запуск парсингу
+
     @GetMapping("/collect")
     public String collect() {
         scraperService.fetchAndSaveQuotes();
         return "redirect:/";
     }
 
-    // Додавання власної цитати (POST метод)
+
     @PostMapping("/add")
     public String addQuote(@RequestParam("customText") String text) {
         if (text != null && !text.trim().isEmpty()) {
@@ -41,7 +41,7 @@ public class WebController {
         return "redirect:/";
     }
 
-    // Видалення цитати за ID
+
     @GetMapping("/delete/{id}")
     public String deleteQuote(@PathVariable("id") Long id) {
         quoteRepository.deleteById(id);

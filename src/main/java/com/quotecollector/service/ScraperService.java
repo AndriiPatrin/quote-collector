@@ -18,12 +18,12 @@ public class ScraperService {
 
     public void fetchAndSaveQuotes() {
         try {
-            // Підключення до сайту з імітацією браузера
+
             Document doc = Jsoup.connect("http://quotes.toscrape.com")
                                 .userAgent("Mozilla/5.0")
                                 .get();
 
-            // Пошук елементів за класом .text та збереження в БД
+
             for (Element el : doc.getElementsByClass("text")) {
                 quoteRepository.save(new Quote(el.text()));
             }
