@@ -1,0 +1,5 @@
+com/quotecollector/service/ScraperService.class
+com/quotecollector/QuoteCollectorApplication.class
+com/quotecollector/controller/WebController.class
+com/quotecollector/model/Quote.class
+com/quotecollector/repository/QuoteRepository.class

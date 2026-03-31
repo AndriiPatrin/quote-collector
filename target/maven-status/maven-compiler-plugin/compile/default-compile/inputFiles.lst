@@ -1,0 +1,5 @@
+/workspaces/quote-collector/src/main/java/com/quotecollector/model/Quote.java
+/workspaces/quote-collector/src/main/java/com/quotecollector/controller/WebController.java
+/workspaces/quote-collector/src/main/java/com/quotecollector/QuoteCollectorApplication.java
+/workspaces/quote-collector/src/main/java/com/quotecollector/service/ScraperService.java
+/workspaces/quote-collector/src/main/java/com/quotecollector/repository/QuoteRepository.java
